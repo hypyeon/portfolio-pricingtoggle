@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./scss/style.css">
+  
+  <title>Frontend Mentor | Pricing Component</title>
+
+</head>
+<body class="flex-dir-col">
+  <div class="bg">
+    <img src="/images/bg-top.svg" alt="background" id="bgTop">
+    <img src="/images/bg-bottom.svg" alt="background" id="bgBottom">
+  </div>
+  <header class="flex-dir-col">
+    <h1 id="title">Our Pricing</h1>
+    <div class="flex j-c-sb">
+      <div class="term">Annually</div>
+      <label id="switch">
+        <input type="checkbox" id="input">
+        <span id="slider"></span>
+      </label>
+      <div class="term">Monthly</div>
+    </div>
+  </header>
+  <main class="flex">
+    <div class="pricing flex-dir-col bg-white" id="basic">
+      <div class="plan">Basic</div>
+      <div class="price">
+        <div class="annual">
+          <span>&dollar;</span>
+          <h3>199.99</h3>
+        </div>
+        <div class="monthly">
+          <span>&dollar;</span>
+          <h3>19.99</h3>
+        </div>
+      </div>
+      <table>
+        <tr></tr>
+        <tr>
+          <td>
+            500 GB Storage
+          </td>
+        </tr>
+        <tr>
+          <td>
+            2 Users Allowed
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Send up to 3 GB
+          </td>
+        </tr>
+      </table>
+      <div class="learnmore bg-lg">Learn More</div>
+    </div>
+    <div class="pricing flex-dir-col bg-lg" id="professional">
+      <div class="plan">Professional</div>
+      <div class="price">
+        <div class="annual">
+          <span>&dollar;</span>
+          <h3>249.99</h3>
+        </div>
+        <div class="monthly">
+          <span>&dollar;</span>
+          <h3>24.99</h3>
+        </div>
+      </div>
+      <table>
+        <tr></tr>
+        <tr>
+          <td>
+            1 TB Storage
+          </td>
+        </tr>
+        <tr>
+          <td>
+            5 Users Allowed
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Send up to 10 GB
+          </td>
+        </tr>
+      </table>
+      <div class="learnmore bg-white">Learn More</div>
+    </div>
+    <div class="pricing flex-dir-col bg-white" id="master">
+      <div class="plan">Master</div>
+      <div class="price">
+        <div class="annual">
+          <span>&dollar;</span>
+          <h3>399.99</h3>
+        </div>
+        <div class="monthly">
+          <span>&dollar;</span>
+          <h3>39.99</h3>
+        </div>
+      </div>
+      <table>
+        <tr></tr>
+        <tr>
+          <td>
+            2 TB Storage
+          </td>
+        </tr>
+        <tr>
+          <td>
+            10 Users Allowed
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Send up to 20 GB
+          </td>
+        </tr>
+      </table>
+      <div class="learnmore bg-lg">Learn More</div>
+    </div>
+
+  </main>
+  <footer>
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    x <a href="https://github.com/hypyeon" target="_blank">Hayeong Pyeon</a>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
