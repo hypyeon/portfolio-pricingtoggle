@@ -1,7 +1,12 @@
 @import './globals';
 @import './variables';
 
+html, body {
+    height: 100vh;
+}
+
 body {
+    place-content: center;
     .bg {
         #bgTop {
             height: 80vh;
@@ -17,15 +22,16 @@ body {
         }
     }
     header {
-        margin-bottom: 2rem;
+        margin: 0;
+        padding-bottom: 1.5rem;
+
         #title {
-            color: $grayishBlue;
-            letter-spacing: 1px;
-            padding-bottom: 3rem;
+            letter-spacing: 0.75px;
+            padding: 2.5rem 0;
         }
         .term {
             color: $lightGrayishBlue;
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 100%;
             align-self: center;
         }
@@ -49,7 +55,11 @@ body {
                 right: 0;
                 bottom: 0;
                 border-radius: 36px;
-                background-color: hsl(237, 63%, 64%);
+                background-image: $linearGradient;
+            }
+            #slider:hover {
+                background-image: none;
+                background-color: hsl(236, 72%, 79%);
             }
 
             #slider::before {
@@ -71,7 +81,7 @@ body {
         }
     }
     main {
-        padding: 60px 48px;
+        padding: 60px 32px 32px 32px;
         position: relative;
 
         #professional {
@@ -82,13 +92,14 @@ body {
             .learnmore {
                 color: hsl(237, 63%, 64%);
             }
-        }    
+        }
 
         .pricing {
-            padding: 36px;
+            padding: 32px;
             align-self: center;
             .plan {
                 font-size: 1.25em;
+                letter-spacing: 0.5px;
             }
             .price {
                 font-size: 4rem;
@@ -96,7 +107,6 @@ body {
                 padding: 24px 0;
 
                 .annual, .monthly {
-                    display: none;
                     display: flex;
                     margin: 1rem;
                     span {
@@ -109,22 +119,41 @@ body {
                         letter-spacing: -2px;
                     }
                 }
-                .monthly.active {
-                    display: block;
-                }
-                .annual.active {
-                    display: block;
+                .monthly {
+                    display: none;
                 }
             }
             .learnmore {
-                padding: 12px 0;
+                padding: 14px 0;
                 margin-top: 24px;
                 border-radius: 6px;
                 text-transform: uppercase;
                 font-size: 0.85em;
                 letter-spacing: 2px;
+                border: 1.25px solid white; 
                 color: white;
             }
+            .nonpro {
+                background-image: $linearGradient;
+            }
+            .nonpro:hover {
+                border: 1.25px solid hsl(237, 63%, 64%);
+                background-image: none;
+                background-color: white;
+                color: hsl(237, 63%, 64%);
+                cursor: pointer;
+            }
+            #pro {
+                background-color: white;
+                padding: 12.75px 0;
+            }
+            #pro:hover {
+                background-color: hsla(237, 83%, 72%, 0);
+                color: white;
+                border: 1.25px solid white;
+                cursor: pointer;
+            }
+            
         }
         #basic {
             border-radius: 12px 0 0 12px;
@@ -134,6 +163,75 @@ body {
         }
     }
     footer {
-        padding-top: 24px;
+        padding: 12px 0 36px 0;
+        a:hover {
+            text-decoration: underline;
+        }
     }
+}
+
+@media only screen and (max-width: 768px) {
+
+    html, body {
+        height: 100%;
+    }
+    body {
+        place-content: stretch;
+        header {
+            margin: 60px 0 72px 0;
+            padding: 0;
+            z-index: 2;
+            #title {
+                font-size: 1.75rem;
+                padding: 0 0 2.5rem 0;
+            }
+            .term {
+                color: $lightGrayishBlue;
+                font-size: 0.85rem;
+                line-height: 100%;
+                align-self: center;
+            }    
+        }
+    }
+    .bg {
+        #bgTop {
+            width: 50vw;
+            z-index: 0;
+        }
+        #bgBottom {
+            display: none;
+        }
+    }
+    #main {
+        flex-direction: column;
+        z-index: 5;
+        padding: 0;
+
+        .pricing {
+            margin: 0;
+            padding: 32px;
+            .price {
+                h3 {
+                    font-size: 3.75rem;
+                    width: 198px;
+                }
+            }
+        }
+        #professional {
+            height: 100%;
+            margin: 32px 0;
+            h3 {
+                font-size: 3.75rem;
+                width: 198px;
+            }
+        }
+        #basic, #master {
+            border-radius: 12px;
+            height: 100%;
+        }
+    }
+    footer {
+        padding: 24px 0 48px 0;
+    }
+
 }

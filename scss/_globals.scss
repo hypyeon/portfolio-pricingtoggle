@@ -12,12 +12,9 @@ a, a:focus, a:visited {
     font-size: 0.85em;
 }
 body {
-    width: 100vw;
     background-color: $veryLightGrayishBlue;
     font-size: 15px;
     @include basicFont;
-    height: 100vh;
-    place-content: center;
     align-items: center;
     text-align: center;
     .bg {
@@ -42,6 +39,9 @@ body {
 }
 .bg-lg {
     background-image: $linearGradient;
+}
+.f-c-gb{
+    color: $grayishBlue;
 }
 table {
     border-collapse: collapse;
